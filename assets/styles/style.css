@@ -3,35 +3,49 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
-  background-color: #f8f8f8;
+  color: #2e2e2e;
+  background-color: #f5f7fa;
   line-height: 1.6;
 }
 
 /* Header*/
 header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #111;
-  color: white;
+  padding: 15px 30px;
+  background-color: #1a2238;
+  color: #f0e6d2;
+  box-shadow: 0 2px 6px rgba(26, 34, 56, 0.6);
+  flex-wrap: wrap;
+}
+
+header div {
+  flex: 1 1 auto;
+  min-width: 200px;
 }
 
 header img.logo {
-  height: 60px;
-  margin-right: 20px;
+  flex-shrink: 0;
+  height: 80px;
+  border-radius: 50px;
+  box-shadow: 0 0 8px rgba(240, 230, 210, 0.7);
 }
 
 header h1 {
-  margin: 0;
+  margin-left: 40px;
+  margin-bottom: 0;
   font-size: 1.8rem;
+  color: #f0e6d2;
 }
 
 header h2 {
-  margin: 0;
+  margin-top: 0;
+  margin-left: 40px;
   font-weight: 300;
   font-size: 1rem;
-  opacity: 0.8;
+  opacity: 0.85;
+  color: #d6c9a8;
 }
 
 /* Welcoming block */
@@ -39,6 +53,9 @@ header h2 {
   max-width: 800px;
   margin: 30px auto;
   padding: 0 20px;
+  color: #444444;
+  text-align: justify;
+  text-indent: 2em;
 }
 
 /* Main links-block */
@@ -52,34 +69,42 @@ header h2 {
 
 .main-block {
   display: block;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 20px;
   text-align: center;
   text-decoration: none;
-  color: inherit;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #1a2238;
+  box-shadow: 0 6px 12px rgba(26, 34, 56, 0.1);
+  width: 320px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .main-block h3 {
   margin-top: 0;
-  color: #0073e6;
+  color: #b28f36;
+  font-size: 1.5rem;
+}
+
+.main-block p {
+  color: #555;
+  font-weight: 400;
+  margin-top: 8px;
 }
 
 .main-block:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(178, 143, 54, 0.3);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 15px;
-  background-color: #111;
-  color: white;
+  background-color: #1a2238;
+  color: #f0e6d2;
   font-size: 0.9rem;
+  box-shadow: inset 0 1px 3px rgba(240, 230, 210, 0.2);
 }
 
 /* Mobile adaptive */
@@ -89,8 +114,13 @@ footer {
     text-align: center;
   }
 
+  header div {
+    min-width: auto;
+    margin-bottom: 10px;
+  }
+
   header img.logo {
-    margin: 0 0 10px 0;
+    margin-left: 0;
   }
 
   .main-block {
