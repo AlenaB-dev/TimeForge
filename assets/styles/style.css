@@ -1,4 +1,100 @@
-#logo {
-  width: 100px;
-  border-radius: 50px;
+/* Main styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f8f8f8;
+  line-height: 1.6;
+}
+
+/* Header*/
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #111;
+  color: white;
+}
+
+header img.logo {
+  height: 60px;
+  margin-right: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header h2 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Welcoming block */
+.welcoming {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Main links-block */
+.main-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.main-block {
+  display: block;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-block h3 {
+  margin-top: 0;
+  color: #0073e6;
+}
+
+.main-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #111;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Mobile adaptive */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header img.logo {
+    margin: 0 0 10px 0;
+  }
+
+  .main-block {
+    width: 100%;
+    max-width: 350px;
+  }
 }
