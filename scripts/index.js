@@ -1,27 +1,29 @@
+/** logic for main page banner slides */
+
+const watchesSlides = document.querySelectorAll(".watches-slides img");
+let current = 0;
+
+function showSlide(index) {
+  watchesSlides.forEach((img, i) => {
+    img.style.opacity = i === index ? "1" : "0";
+  });
+}
+
+function nextSlide() {
+  current = (current + 1) % watchesSlides.length;
+  showSlide(current);
+}
+
+// showing first slide
+showSlide(current);
+
+// changing img every 4 sec
+
+setInterval(nextSlide, 4000);
+
 /** logic for main page navigation*/
 
 const content = document.getElementById("content");
-
-const homeContent = `
-  <div class="welcoming">
-    <p>
-      At TimeForge, we believe that every second counts. Our mission is to
-      bring together watch enthusiasts, collectors, and curious minds from
-      around the world to explore the fascinating world of horology.
-    </p>
-    <p>
-      Discover the latest industry news, in-depth reviews, and a carefully
-      curated catalog of timepieces crafted by the world’s most renowned
-      brands. Whether you’re a seasoned collector or just starting your
-      journey, TimeForge is your trusted companion in the art and science of
-      watchmaking.
-    </p>
-    <p>
-      Join us as we celebrate craftsmanship, innovation, and timeless style
-      — because here, precision truly meets passion.
-    </p>
-  </div>
-`;
 
 const articlesContent = `
       <h2>Articles</h2>
