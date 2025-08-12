@@ -53,7 +53,7 @@ header h2 {
 .watches-banner {
   position: relative;
   width: 100%;
-  height: 70hv;
+  height: 70vh;
   overflow: hidden;
 }
 
@@ -77,8 +77,8 @@ header h2 {
 }
 .banner-text {
   position: absolute;
-  top: 50%;
-  left: 0;
+  top: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
@@ -86,7 +86,8 @@ header h2 {
 }
 
 .banner-text h2 {
-  font-size: 3 rem;
+  font-family: cursive;
+  font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 
@@ -118,7 +119,7 @@ header h2 {
   text-decoration: none;
   color: #1a2238;
   box-shadow: 0 6px 12px rgba(26, 34, 56, 0.1);
-  width: 320px;
+  width: 300px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
