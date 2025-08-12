@@ -37,11 +37,6 @@ const catalogContent = `
       <p>Find your perfect watch that matches your style and passion.</p>
     `;
 
-document.getElementById("link-home").addEventListener("click", function (e) {
-  e.preventDefault();
-  content.innerHTML = homeContent;
-});
-
 document
   .getElementById("link-articles")
   .addEventListener("click", function (e) {
