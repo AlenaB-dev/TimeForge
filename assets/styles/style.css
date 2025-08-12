@@ -40,12 +40,18 @@ header h1 {
 }
 
 #link-home {
-  display: block;
+  display: contents;
+}
+
+#link-home p {
   background-color: #a5a2a2;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
-  color: #b28f36;
+  color: #f0e6d2;
+  font-size: 1.2rem;
   width: 100px;
+  border-radius: 20px;
+  margin-left: 40px;
 }
 
 /* Main page banner */
