@@ -1,16 +1,17 @@
-/** logic for main page banner slides */
+/** banner slides */
 
-const watchesSlides = document.querySelectorAll(".watches-slides img");
+const slides = document.querySelectorAll(".watches-slides img");
 let current = 0;
 
 function showSlide(index) {
-  watchesSlides.forEach((img, i) => {
-    img.style.opacity = i === index ? "1" : "0";
+  slides.forEach((img, i) => {
+    img.classList.remove("active");
+    if (i === index) img.classList.add("active");
   });
 }
 
 function nextSlide() {
-  current = (current + 1) % watchesSlides.length;
+  current = (current + 1) % slides.length;
   showSlide(current);
 }
 
@@ -21,30 +22,39 @@ showSlide(current);
 
 setInterval(nextSlide, 4000);
 
-/** logic for main page navigation*/
+// reveal .welcoming text
+const welcomingBlock = document.querySelector(".welcoming");
 
-const content = document.getElementById("content");
+function revealTextOnScroll() {
+  const rect = welcomingBlock.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
 
-const articlesContent = `
-      <h2>Articles</h2>
-      <p>Here you can read the latest industry news and reviews on watches, horology, and more.</p>
-      <p>Stay updated with expert insights and timeless stories.</p>
-    `;
+  if (rect.top <= windowHeight - 100) {
+    welcomingBlock.classList.add("visible");
+    window.removeEventListener("scoll", revealTextOnScroll);
+  }
+}
 
-const catalogContent = `
-      <h2>Catalog</h2>
-      <p>Explore our curated selection of timepieces from top brands around the world.</p>
-      <p>Find your perfect watch that matches your style and passion.</p>
-    `;
+// listenning scroll
+window.addEventListener("scroll", revealTextOnScroll);
+revealTextOnScroll();
 
-document
-  .getElementById("link-articles")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    content.innerHTML = articlesContent;
+// reveal .main-block
+
+const mainBlocks = document.querySelectorAll(".main-block");
+
+function revealMainBlocks() {
+  const windowHeight = window.innerHeight;
+
+  mainBlocks.forEach((block) => {
+    const rect = block.getBoundingClientRect();
+    if (rect.top <= windowHeight - 100) {
+      block.classList.add("visible");
+    }
   });
+}
 
-document.getElementById("link-catalog").addEventListener("click", function (e) {
-  e.preventDefault();
-  content.innerHTML = catalogContent;
-});
+// listening scroll
+window.addEventListener("scroll", revealMainBlocks);
+
+revealMainBlocks();
