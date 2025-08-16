@@ -19,7 +19,6 @@ function nextSlide() {
 showSlide(current);
 
 // changing img every 4 sec
-
 setInterval(nextSlide, 4000);
 
 // reveal .welcoming text
@@ -31,7 +30,7 @@ function revealTextOnScroll() {
 
   if (rect.top <= windowHeight - 100) {
     welcomingBlock.classList.add("visible");
-    window.removeEventListener("scoll", revealTextOnScroll);
+    window.removeEventListener("scroll", revealTextOnScroll);
   }
 }
 
@@ -40,13 +39,13 @@ window.addEventListener("scroll", revealTextOnScroll);
 revealTextOnScroll();
 
 // reveal .main-block
-
 const mainBlocks = document.querySelectorAll(".main-block");
 
 function revealMainBlocks() {
   const windowHeight = window.innerHeight;
 
   mainBlocks.forEach((block) => {
+    if (!block) return; // защита от null
     const rect = block.getBoundingClientRect();
     if (rect.top <= windowHeight - 100) {
       block.classList.add("visible");
