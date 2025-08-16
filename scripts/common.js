@@ -3,7 +3,7 @@
 fetch("includes/header.html")
   .then((response) => response.text())
   .then((data) => {
-    document.documentElementById("header-placeholder").innerHTML = data;
+    document.getElementById("header-placeholder").innerHTML = data;
   });
 
 // footer
