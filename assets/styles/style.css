@@ -32,8 +32,9 @@ header img.logo {
   margin-bottom: 5px;
 }
 
-.nav-link active {
-  background-color: #7d7b7b;
+.nav-link.active {
+  background-color: #605e5e !important;
+  color: #f0e6d2 !important;
 }
 
 /* Banner */
@@ -81,11 +82,6 @@ header img.logo {
   font-family: cursive;
   font-size: 3rem;
   margin: 0;
-}
-
-/* Banner Hover */
-.watches-banner:hover img.active {
-  transform: scale(1.05);
 }
 
 /* Welcoming block */
