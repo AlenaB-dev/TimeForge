@@ -1,4 +1,11 @@
-/* Main styles */
+/* Reset box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Body */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -9,51 +16,27 @@ body {
 }
 
 /* Header*/
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: #1a2238;
-  color: #f0e6d2;
-  box-shadow: 0 2px 6px rgba(26, 34, 56, 0.6);
-  flex-wrap: wrap;
-}
-
-header div {
-  flex: 1 1 auto;
-  min-width: 200px;
-}
 
 header img.logo {
-  flex-shrink: 0;
-  height: 80px;
-  border-radius: 40px;
+  height: 60px;
+  border-radius: 30px;
   box-shadow: 0 0 4px rgba(240, 230, 210, 0.7);
 }
-
-header h1 {
-  margin-left: 40px;
-  margin-bottom: 0;
-  font-size: 1.8rem;
-  color: #f0e6d2;
+.nav-link {
+  background-color: #a5a2a2;
+  text-align: center;
+  color: #f0e6d2 !important;
+  border-radius: 20px;
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .nav-link active {
   background-color: #7d7b7b;
-  color: #f0e6d2;
 }
 
-.nav-link {
-  background-color: #a5a2a2;
-  text-align: center;
-  color: #f0e6d2;
-  font-size: 0.9rem;
-  border-radius: 20px;
-  margin-left: 15px;
-}
-
-/* Main page banner */
+/* Banner */
 
 .watches-banner {
   position: relative;
@@ -62,24 +45,17 @@ header h1 {
   overflow: hidden;
 }
 
-.watches-slides {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-}
-
 .watches-slides img {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
-  top: 0;
-  left: 0;
+  transition: opacity 1s ease-in-out, transform 0.5s ease;
+}
+
+.watches-slides img.active {
+  opacity: 1;
 }
 
 .overlay {
@@ -93,7 +69,7 @@ header h1 {
 }
 .banner-text {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -104,7 +80,12 @@ header h1 {
 .banner-text h2 {
   font-family: cursive;
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  margin: 0;
+}
+
+/* Banner Hover */
+.watches-banner:hover img.active {
+  transform: scale(1.05);
 }
 
 /* Welcoming block */
@@ -115,9 +96,17 @@ header h1 {
   color: #444444;
   text-align: justify;
   text-indent: 2em;
+  opacity: 2em;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-/* Main links-block */
+.welcoming.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Main links */
 .main-links {
   display: flex;
   gap: 20px;
@@ -136,7 +125,15 @@ header h1 {
   color: #1a2238;
   box-shadow: 0 6px 12px rgba(26, 34, 56, 0.1);
   width: 300px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.8s ease,
+    transform 0.8s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.main-block.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .main-block h3 {
@@ -147,7 +144,6 @@ header h1 {
 
 .main-block p {
   color: #555;
-  font-weight: 400;
   margin-top: 8px;
 }
 
@@ -162,64 +158,15 @@ footer {
   padding: 15px;
   background-color: #1a2238;
   color: #f0e6d2;
-  font-size: 0.9rem;
-  box-shadow: inset 0 1px 3px rgba(240, 230, 210, 0.2);
 }
 
 /* Mobile adaptive */
 @media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    text-align: center;
+  .banner-text h2 {
+    font-size: 2rem;
   }
-
-  header div {
-    min-width: auto;
-    margin-bottom: 10px;
-  }
-
-  header img.logo {
-    margin-left: 0;
-  }
-
   .main-block {
     width: 100%;
     max-width: 350px;
   }
-
-  .banner-text h2 {
-    font-size: 2rem;
-  }
-}
-
-/* Burger-menu */
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28240, 230, 210, 0.9%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10'd='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-/* Offcanvas */
-.offcanvas {
-  transition: transform 0.35s ease-in-out; /* плавное выезжание */
-}
-
-.offcanvas-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #f0e6d2;
-}
-
-.offcanvas-body .nav-link {
-  background-color: #a5a2a2;
-  color: #f0e6d2 !important;
-  margin: 5px 0;
-  border-radius: 20px;
-  text-align: center;
-}
-
-.offcanvas-body .nav-link.active {
-  background-color: #7d7b7b !important;
 }
