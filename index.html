@@ -33,27 +33,54 @@
   </head>
   <body>
     <header>
-      <a id="logo-link" href="index.html">
-        <img
-          src="assets/images/logo/TimeForge-logo-small.png"
-          alt="TimeForge"
-          class="logo"
-        />
-      </a>
-      <div>
-        <h1>Welcome to TimeForge</h1>
-      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+        <!-- Лого -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="assets/images/logo/TimeForge-logo-small.png"
+            alt="TimeForge"
+            class="logo"
+          />
+        </a>
 
-      <nav class="nav nav-pills flex-column flex-sm-row">
-        <a
-          class="flex-sm-fill text-sm-center nav-link active"
-          aria-current="page"
-          href="index.html"
-          >Home</a
+        <!-- Заголовок -->
+        <span class="navbar-text mx-auto text-light fw-bold">
+          Welcome to TimeForge
+        </span>
+
+        <!-- Кнопка-бургер -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-        <a class="flex-sm-fill text-sm-center nav-link" href="#">Article</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="#">Catalog</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="#">Contact</a>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Навигация -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Catalog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
