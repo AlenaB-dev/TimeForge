@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="assets/images/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+
+    <title>TimeForge</title>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <main>
+      <h1 id="articleHeader">Articles</h1>
+
+      <!-- search form -->
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+
+      <!-- sort by form-->
+      <div class="d-flex align-items-center mb-3">
+        <span class="me-2 fw-semibold">Sort by:</span>
+        <select id="sortBy" class="form-select w-auto">
+          <option value="newest">Newest</option>
+          <option value="popular">Most Popular</option>
+          <option value="oldest">Oldest</option>
+          <option value="priceLowHigh">Price: Low to High</option>
+          <option value="priceHighLow">Price: High to Low</option>
+        </select>
+      </div>
+    </main>
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <!--bootstrap navs script-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--own script-->
+    <script src="scripts/common.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
