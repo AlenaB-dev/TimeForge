@@ -17,28 +17,26 @@ body {
 
 /* Header*/
 
-header img.logo {
+#header-placeholder img.logo {
   height: 60px;
   border-radius: 30px;
   box-shadow: 0 0 4px rgba(240, 230, 210, 0.7);
 }
 
-.navbar-text {
+#header-placeholder .navbar-text {
   font-size: 1.5rem;
   white-space: nowrap;
 }
 
-.nav-link {
+#header-placeholder .nav-link {
   background-color: #a5a2a2;
   text-align: center;
   color: #f0e6d2 !important;
   border-radius: 20px;
-  margin-left: 15px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px 15px 5px 0;
 }
 
-.nav-link.active {
+#header-placeholder .nav-link.active {
   background-color: #605e5e !important;
   color: #f0e6d2 !important;
 }
@@ -58,7 +56,7 @@ header img.logo {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease-in-out, transform 0.5s ease;
+  transition: opacity 1s ease-in-out;
 }
 
 .watches-slides img.active {
@@ -98,14 +96,9 @@ header img.logo {
   color: #444444;
   text-align: justify;
   text-indent: 2em;
-  opacity: 2em;
+  opacity: 1;
   transform: translateY(20px);
   transition: opacity 1s ease, transform 1s ease;
-}
-
-.welcoming.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Main links */
@@ -127,15 +120,7 @@ header img.logo {
   color: #1a2238;
   box-shadow: 0 6px 12px rgba(26, 34, 56, 0.1);
   width: 300px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.8s ease,
-    transform 0.8s ease;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.main-block.visible {
-  opacity: 1;
-  transform: translateY(0);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .main-block h3 {
@@ -155,7 +140,7 @@ header img.logo {
 }
 
 /* Footer */
-footer {
+#footer-placeholder {
   text-align: center;
   padding: 15px;
   background-color: #1a2238;
