@@ -41,12 +41,18 @@
           </div>
 
           <!-- Sort by -->
-          <div class="col-auto">
-            <select class="form-select" id="sortBy" aria-label="Sort articles">
+          <div class="col-auto position-relative">
+            <select
+              class="form-select custom-select"
+              id="sortBy"
+              aria-label="Sort articles"
+            >
               <option value="newest">Newest</option>
               <option value="popular">Most Popular</option>
               <option value="oldest">Oldest</option>
             </select>
+            <!-- arrow for custom select -->
+            <span class="custom-arrow">&#9662;</span>
           </div>
 
           <!-- Submit button -->
