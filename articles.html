@@ -28,36 +28,35 @@
       <h1 id="article-header">Articles</h1>
 
       <!-- Search form -->
-      <nav class="navbar bg-body-tertiary article-search-nav">
+      <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-          <form class="d-flex article-search-form" role="search">
+          <form class="d-flex article-search" role="search">
             <input
-              class="form-control me-2 article-search-input"
+              class="form-control me-2"
               type="search"
               placeholder="Search articles..."
               aria-label="Search"
             />
-            <button
-              class="btn btn-outline-success article-search-btn"
-              type="submit"
-            >
-              Search
-            </button>
+            <button class="btn" type="submit">Search</button>
           </form>
         </div>
       </nav>
 
       <!-- Sort by form -->
-      <div class="d-flex align-items-center mb-3 article-sort">
-        <span class="me-2 fw-semibold">Sort by:</span>
-        <select id="sortBy" class="form-select w-auto article-sort-select">
-          <option value="newest">Newest</option>
-          <option value="popular">Most Popular</option>
-          <option value="oldest">Oldest</option>
-        </select>
+      <div class="sort-form-container">
+        <div class="sort-form">
+          <span>Sort by:</span>
+          <select id="sortBy" class="form-select w-auto article-sort-select">
+            <option value="newest">Newest</option>
+            <option value="popular">Most Popular</option>
+            <option value="oldest">Oldest</option>
+          </select>
+        </div>
       </div>
 
+      <!-- Article section -->
       <section class="article-list">
+        <!-- Article 1 -->
         <article class="article-block">
           <h2>Название статьи</h2>
           <p>Краткое описание или анонс статьи...</p>
