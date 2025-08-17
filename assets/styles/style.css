@@ -139,6 +139,119 @@ body {
   box-shadow: 0 10px 25px rgba(178, 143, 54, 0.3);
 }
 
+/* Style for Articles page */
+
+/* Header */
+#article-header {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1a2238;
+  margin: 30px 0 20px 0;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+/* Search form */
+
+.article-search {
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.article-search input.form-control {
+  border-radius: 30px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+}
+
+.article-search button.btn {
+  border-radius: 20px;
+  padding: 8px 20px;
+  background-color: #b28f36;
+  border-color: #b28f36;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.article-search button.btn:hover {
+  background-color: #8f6c27;
+  border-color: #8f6c27;
+  color: #fff;
+}
+
+/* Sort by form */
+.sort-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.sort-form span {
+  font-weight: 600;
+  color: #1a2238;
+}
+
+.sort-form select.form-select {
+  border-radius: 20px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  min-width: 150px;
+}
+
+/* Arcitles list */
+.articles-list {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Individuals articles block*/
+.article-block {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 12px rgbd(26, 34, 56, 0.1);
+  transition: transfrom 0.25s ease, box-shadow 0.25s ease;
+}
+
+.article-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(26, 34, 56, 0.2);
+}
+
+.article-block h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #1a2238;
+}
+
+.article-block p {
+  color: #555;
+  margin: 10px 0 15px 0;
+  line-height: 1.5;
+}
+
+.article-block .read-more {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #b28f36;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.article-block .read-more:hover {
+  background-color: #9f7a2d;
+  transform: translateY(-2px);
+}
+
 /* Footer */
 #footer-placeholder {
   text-align: center;
@@ -147,7 +260,7 @@ body {
   color: #f0e6d2;
 }
 
-/* Mobile adaptive */
+/* Mobile adaptive for index */
 @media (max-width: 600px) {
   .banner-text h2 {
     font-size: 2rem;
@@ -155,5 +268,38 @@ body {
   .main-block {
     width: 100%;
     max-width: 350px;
+  }
+}
+
+/* Mobile responsive for articles */
+@media (max-width: 768px) {
+  .article-list {
+    padding: 0 15px;
+  }
+
+  .article-block h2 {
+    font-size: 1.4rem;
+  }
+
+  .article-block p {
+    font-size: 0.9rem;
+  }
+
+  .read-more {
+    font-size: 0.85rem;
+  }
+
+  #article-header {
+    font-size: 2rem;
+    margin: 20px 0 15px 0;
+  }
+
+  .article-search {
+    padding: 0 15px;
+  }
+
+  .sort-form {
+    flex-direction: column;
+    gap: 8px;
   }
 }
