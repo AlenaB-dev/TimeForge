@@ -173,27 +173,49 @@ body {
 }
 
 /* Sort select*/
-.article-controls select.form-select {
+.article-sort-select {
+  border-radius: 20px;
+  background-color: #fff;
+  color: #1a2238;
+  border: 1px solid #b28f36;
+  padding: 8px 14px;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border-radius: 20px;
-  border: 1px solid #b28f36;
-  padding: 8px 14px;
-  min-width: 150px;
-  background-color: #fff;
-  color: #1a2238;
-  font-weight: 500;
-
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23605e5e'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23605e5e'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 10px 6px;
   cursor: pointer;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.article-controls select.form-select:focus {
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  border: 1px solid #b28f36;
+  border-radius: 20px;
+  padding: 8px 14px;
+  color: #1a2238;
+  font-weight: 500;
+  min-width: 150px;
+  cursor: pointer;
+}
+
+/* Arrow */
+.custom-select + .custom-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.8rem;
+  color: #605e5e;
+}
+
+/* Hover и focus */
+.custom-select:focus {
   border-color: #8f6c27;
   box-shadow: 0 0 0 2px rgba(178, 143, 54, 0.2);
   outline: none;
