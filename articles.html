@@ -27,23 +27,23 @@
     <main>
       <h1 id="article-header">Articles</h1>
 
-      <!-- Search + Sort form -->
+      <!-- Search + Sort -->
       <div class="container my-3">
-        <form class="row g-2 align-items-center article-controls" role="search">
+        <form class="article-controls row g-2 align-items-center" role="search">
           <!-- Search -->
           <div class="col-auto flex-grow-1">
             <input
               type="search"
-              class="form-control"
+              class="form-control article-search-input"
               placeholder="Search articles..."
               aria-label="Search"
             />
           </div>
 
           <!-- Sort by -->
-          <div class="col-auto position-relative">
+          <div class="col-auto">
             <select
-              class="form-select custom-select"
+              class="form-select article-sort-select"
               id="sortBy"
               aria-label="Sort articles"
             >
@@ -51,13 +51,13 @@
               <option value="popular">Most Popular</option>
               <option value="oldest">Oldest</option>
             </select>
-            <!-- arrow for custom select -->
-            <span class="custom-arrow">&#9662;</span>
           </div>
 
           <!-- Submit button -->
           <div class="col-auto">
-            <button type="submit" class="btn btn-primary">Search</button>
+            <button type="submit" class="btn btn-primary article-search-btn">
+              Search
+            </button>
           </div>
         </form>
       </div>
