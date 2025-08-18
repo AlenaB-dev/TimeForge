@@ -16,7 +16,6 @@ body {
 }
 
 /* Header*/
-
 #header-placeholder img.logo {
   height: 60px;
   border-radius: 10px;
@@ -42,7 +41,6 @@ body {
 }
 
 /* Banner */
-
 .watches-banner {
   position: relative;
   width: 100%;
@@ -196,54 +194,79 @@ body {
 
 /* Arcitles list */
 .articles-list {
-  max-width: 1000px;
-  margin: 30px auto;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 
 /* Individuals articles block*/
 .article-block {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 20px 25px;
-  box-shadow: 0 6px 12px rgbd(26, 34, 56, 0.1);
-  transition: transfrom 0.25s ease, box-shadow 0.25s ease;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transfrom 0.2s ease, box-shadow 0.2s ease;
+  margin: 0 10px 5px 10px;
 }
 
 .article-block:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(26, 34, 56, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
+/* Headings */
 .article-block h2 {
-  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 1.6rem;
   color: #1a2238;
+  font-weight: 700;
 }
 
+/* Date */
+.article-block p:first-of-type {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+/* Short description */
 .article-block p {
-  color: #555;
-  margin: 10px 0 15px 0;
+  color: #333;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
-.article-block .read-more {
-  display: inline-block;
-  padding: 8px 15px;
-  background-color: #b28f36;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: background-color 0.25s ease, transform 0.25s ease;
+/* Details (expandable text) */
+.article-block details {
+  margin-top: 10px;
 }
 
-.article-block .read-more:hover {
-  background-color: #9f7a2d;
-  transform: translateY(-2px);
+.article-block summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: #b28f36;
+  transition: color 0.2s ease;
+}
+
+.article-block summary:hover {
+  color: #8f6c27;
+}
+
+/* Links inside details */
+.article-block a {
+  color: #b28f36;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: border-color 0.2s ease;
+}
+
+.article-block a:hover {
+  border-color: #b28f36;
 }
 
 /* Footer */
@@ -271,16 +294,16 @@ body {
     padding: 0 15px;
   }
 
+  .article-block {
+    padding: 16px;
+  }
+
   .article-block h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .article-block p {
     font-size: 0.9rem;
-  }
-
-  .read-more {
-    font-size: 0.85rem;
   }
 
   #article-header {
