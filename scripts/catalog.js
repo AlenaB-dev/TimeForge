@@ -6,6 +6,7 @@ const categorySelect = document.getElementById("category");
 
 // Rendering function (clean and paste in rigth order)
 function renderItems(filteredItems) {
+  if (!filteredItems) return; // protection from undefined
   catalog.innerHTML = "";
   filteredItems.forEach((item) => catalog.appendChild(item));
 }
@@ -48,7 +49,7 @@ function updateCatalog() {
     );
   }
 
-  renderItems();
+  renderItems(filtered);
 }
 
 // Events on selects
