@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="assets/images/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+
+    <title>TimeForge</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main -->
+    <main>
+      <section class="catalog-header">
+        <h1>Catalog</h1>
+        <p>Discover our curated collection of watches and accessories</p>
+      </section>
+
+      <!-- Search -->
+      <div class="col-auto flex-grow-1">
+        <input
+          type="search"
+          class="form-control article-search-input"
+          placeholder="Search articles..."
+          aria-label="Search"
+        />
+      </div>
+
+      <!-- Catalog Filters -->
+      <section class="filters">
+        <div class="filter-group">
+          <label for="sort">Sort by:</label>
+          <select id="sort">
+            <option value="popular">Most Popular</option>
+            <option value="new">Newest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="category">Category:</label>
+          <select id="category">
+            <option value="all">All</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Catalog Grid -->
+      <section class="catalog">
+        <div class="catalog-item">
+          <img src="assets/images/watch1.jpg" alt="Watch 1" />
+          <h3>Classic Leather Watch</h3>
+          <p>$120</p>
+          <button class="btn">View Details</button>
+        </div>
+
+        <div class="catalog-item">
+          <img src="assets/images/watch2.jpg" alt="Watch 2" />
+          <h3>Sport Chronograph</h3>
+          <p>$220</p>
+          <button class="btn">View Details</button>
+        </div>
+
+        <div class="catalog-item">
+          <img src="assets/images/watch3.jpg" alt="Watch 3" />
+          <h3>Elegant Gold Edition</h3>
+          <p>$350</p>
+          <button class="btn">View Details</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+
+    <!--bootstrap navs script-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Header and footer script-->
+    <script src="scripts/common.js"></script>
+  </body>
+</html>
