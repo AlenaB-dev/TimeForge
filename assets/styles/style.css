@@ -288,6 +288,27 @@ body {
   }
 }
 
+/* Style for Catalog page */
+
+.catalog-header {
+  text-align: center;
+  margin: 10px 10px 20px;
+  padding: 30px 10px;
+  background: linear-gradient(135deg, #1f1f1f, #333);
+  color: #fff;
+  border-radius: 12px;
+}
+
+.catalog-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.catalog-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
 /* Mobile responsive for articles */
 @media (max-width: 768px) {
   .article-list {
