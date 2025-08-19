@@ -370,11 +370,13 @@ main {
 .catalog-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .catalog-item img {
   max-width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
