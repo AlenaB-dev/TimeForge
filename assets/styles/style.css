@@ -396,6 +396,7 @@ main {
   color: #fff;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
+  border-color: #8f6c27;
   cursor: pointer;
   font-size: 0.95rem;
   transition: background 0.3s ease;
@@ -403,6 +404,7 @@ main {
 
 .btn:hover {
   background-color: #b28f36;
+  border-color: #b28f36;
 }
 
 /* Footer */
