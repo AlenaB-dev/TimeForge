@@ -25,7 +25,70 @@
 
     <!-- Main -->
     <main>
-      <h1 id="article-header">Contact us</h1>
+      <h1 id="contact-header">Contact us</h1>
+
+      <!-- Contact Information -->
+      <div class="contact-info mb-4">
+        <h3>Contact information</h3>
+        <p><strong>Address:</strong> Hazlemere, Bucks, England</p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:timeforge@gmail.com">timeforge@gmail.com</a>
+        </p>
+        <p><strong>Phone:</strong> +44 1234 567890</p>
+      </div>
+
+      <!-- Send Message Form -->
+      <div class="send-message">
+        <h3>Send us a message</h3>
+        <form action="" method="post" class="contact-form">
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Message *</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-control"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <p class="mt-3 small text-muted">We usually respond within 24 hours.</p>
+      </div>
     </main>
 
     <!-- Footer -->
