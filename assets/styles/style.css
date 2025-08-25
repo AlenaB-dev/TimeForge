@@ -163,9 +163,10 @@ main {
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
-  justify-content: flex-start;
-  max-width: 700px;
+  justify-content: center;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Search input */
@@ -182,22 +183,6 @@ main {
   padding: 6px 12px;
   border-radius: 20px;
   border: 1px solid #b28f36;
-}
-
-/* Search button */
-.article-search-btn {
-  padding: 6px 16px;
-  border-radius: 20px;
-  background-color: #b28f36;
-  border: 1px solid #b28f36;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.article-search-btn:hover {
-  background-color: #8f6c27;
-  border-color: #8f6c27;
 }
 
 /* Arcitles list */
@@ -289,8 +274,12 @@ main {
   background-color: #34495e;
   color: white;
   cursor: pointer;
-  padding: 12px 16px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.3s, background-color 0.3s;
 }
 
