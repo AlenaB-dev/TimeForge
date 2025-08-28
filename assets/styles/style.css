@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --gold-color: #b28f36;
+  --darkgold-color: #8f6c27;
+  --dark-bg: #1f1f1f;
+  --light-color: #fff;
+  --border-grey: #ccc;
+}
+
 /* Body */
 html,
 body {
@@ -91,7 +99,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: var(--light-color);
   text-align: center;
   z-index: 2;
 }
@@ -126,7 +134,7 @@ main {
 
 .main-block {
   display: block;
-  background-color: #ffffff;
+  background-color: var(--light-color);
   border-radius: 12px;
   padding: 30px 20px;
   text-align: center;
@@ -139,7 +147,7 @@ main {
 
 .main-block h3 {
   margin-top: 0;
-  color: #b28f36;
+  color: var(--gold-color);
   font-size: 1.5rem;
 }
 
@@ -182,7 +190,7 @@ main {
   min-width: 200px;
   padding: 8px 12px;
   border-radius: 20px;
-  border: 1px solid #b28f36;
+  border: 1px solid var(--gold-color);
 }
 
 /* Sort select */
@@ -190,7 +198,7 @@ main {
   min-width: 150px;
   padding: 6px 12px;
   border-radius: 20px;
-  border: 1px solid #b28f36;
+  border: 1px solid var(--gold-color);
 }
 
 /* Arcitles list */
@@ -205,7 +213,7 @@ main {
 
 /* Individuals articles block*/
 .article-block {
-  background: #ffffff;
+  background: var(--light-color);
   border: 1px solid #e0e0e0;
   border-radius: 16px;
   padding: 20px;
@@ -249,17 +257,17 @@ main {
 .article-block summary {
   font-weight: 600;
   cursor: pointer;
-  color: #b28f36;
+  color: var(--gold-color);
   transition: color 0.2s ease;
 }
 
 .article-block summary:hover {
-  color: #8f6c27;
+  color: var(--darkgold-color);
 }
 
 /* Links inside details */
 .article-block a {
-  color: #b28f36;
+  color: var(--gold-color);
   font-weight: 500;
   text-decoration: none;
   border-bottom: 1px dashed transparent;
@@ -267,7 +275,7 @@ main {
 }
 
 .article-block a:hover {
-  border-color: #b28f36;
+  border-color: var(--gold-color);
 }
 
 #scrollTopBtn {
@@ -280,7 +288,7 @@ main {
   border: none;
   outline: none;
   background-color: #34495e;
-  color: white;
+  color: var(--light-color);
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -301,8 +309,8 @@ main {
   text-align: center;
   margin: 10px 10px 20px;
   padding: 30px 10px;
-  background: linear-gradient(135deg, #1f1f1f, #333);
-  color: #fff;
+  background: linear-gradient(135deg, var(--dark-bg), #333);
+  color: var(--light-color);
   border-radius: 12px;
 }
 
@@ -318,19 +326,21 @@ main {
 
 /* --- Search Bar --- */
 .catalog-search-input {
-  margin: 10px auto 10px;
+  margin: 10px auto;
   max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
   display: block;
   padding: 5px 10px;
   font-size: 1rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-grey);
   transition: all 0.3s ease;
 }
 
 .catalog-search-input:focus {
   outline: none;
-  border-color: #b28f36;
+  border-color: var(--gold-color);
   box-shadow: 0 0 8px rgba(129, 136, 3, 0.343);
 }
 
@@ -359,21 +369,20 @@ main {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: #fff
+  background: var(--light-color)
     url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23333'/%3E%3C/svg%3E")
     no-repeat right 10px center;
   background-size: 10px 6px;
-  padding-right: 30px;
   cursor: pointer;
-  padding: 3px;
+  padding: 3px 30px 3px 30px;
   border-radius: 6px;
-  border: 1px solid #bbb;
+  border: 1px solid var(--border-grey);
   min-width: 180px;
   transition: border 0.3s ease;
 }
 
 .filter-group select:focus {
-  border-color: #b28f36;
+  border-color: var(--gold-color);
   outline: none;
 }
 
@@ -386,7 +395,7 @@ main {
 }
 
 .catalog-item {
-  background: #fff;
+  background: var(--light-color);
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 1rem;
@@ -397,12 +406,11 @@ main {
 .catalog-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
 }
 
 .catalog-item img {
   max-width: 100%;
-  height: 200px;
+  max-height: 200px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -419,21 +427,21 @@ main {
   margin-bottom: 1rem;
 }
 
-/* --- Buttons --- */
+/* --- Buttons for catalog page --- */
 .btn {
-  background-color: #8f6c27;
+  background-color: var(--darkgold-color);
   color: #fff;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
-  border-color: #8f6c27;
+  border-color: var(--darkgold-color);
   cursor: pointer;
   font-size: 0.95rem;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-  background-color: #b28f36;
-  border-color: #b28f36;
+  background-color: var(--gold-color);
+  border-color: var(--gold-color);
 }
 
 /* Style for Contact page */
@@ -508,12 +516,12 @@ main {
 .contact-form .btn-primary {
   background: #007bff;
   border: none;
-  color: #fff;
+  color: var(--light-color);
   padding: 10px 18px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .contact-form .btn-primary:hover {
@@ -579,7 +587,6 @@ main {
 }
 
 /* Mobile responsive for navbar */
-
 @media (max-width: 991px) {
   .btn-common {
     flex: unset;
@@ -623,5 +630,14 @@ main {
 
   .article-controls .col-auto {
     width: 100%;
+  }
+}
+
+/* Mobile responsive for сфефдщпу зфпу */
+@media (max-width: 576px) {
+  .catalog-search-input {
+    width: calc(100% - 20px); /* consider parents padding/margin */
+    max-width: 500px;
+    margin: 15px auto;
   }
 }
