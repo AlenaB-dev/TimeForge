@@ -526,7 +526,7 @@ main {
   color: #f0e6d2;
 }
 
-/* Mobile adaptive for index */
+/* Mobile responsive for index */
 @media (max-width: 600px) {
   .banner-text h2 {
     font-size: 2rem;
@@ -536,6 +536,39 @@ main {
     max-width: 350px;
   }
 }
+
+/* Mobile responsive for header */
+@media (max-width: 991px) {
+  .navbar-text-header {
+    order: 1;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  #header-placeholder img.logo {
+    height: 47px;
+  }
+
+  #header-placeholder .navbar-text {
+    font-size: 1.2rem;
+  }
+
+  .navbar-toggler {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .navbar-collapse {
+    order: 3;
+    width: 100%;
+  }
+
+  .navbar-nav {
+    justify-content: center;
+  }
+}
+
 /* Mobile responsive for navbar */
 
 @media (max-width: 991px) {
