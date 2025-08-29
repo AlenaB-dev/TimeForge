@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="assets/styles/style.css" />
 
-    <title>Catalog | TimeForge</title>
+    <title>Contact | TimeForge</title>
 
     <meta
       name="description"
@@ -38,8 +38,8 @@
       <h1 id="contact-header">Contact us</h1>
 
       <!-- Contact Information -->
-      <div class="contact-info mb-4">
-        <h3>Contact information</h3>
+      <section class="contact-info mb-4">
+        <h2>Contact information</h2>
         <p><strong>Address:</strong> Hazlemere, Bucks, England</p>
         <p>
           <strong>Email:</strong>
@@ -49,12 +49,16 @@
           <strong>Phone:</strong>
           <a href="tel:+441234567890">+44 1234 567890</a>
         </p>
-      </div>
+      </section>
 
       <!-- Send Message Form -->
-      <div class="send-message">
-        <h3>Send us a message</h3>
-        <form action="" method="post" class="contact-form">
+      <section class="send-message">
+        <h2 id="sendMessageHeader">Send us a message</h2>
+        <form
+          action="https://formspree.io/f/mdklabgn"
+          method="POST"
+          class="contact-form"
+        >
           <div class="mb-3">
             <label for="name" class="form-label">Your Name *</label>
             <input
@@ -101,21 +105,24 @@
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
         <p class="mt-3 small text-muted">We usually respond within 24 hours.</p>
-      </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
-    <!--bootstrap navs script-->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-    <script src="scripts/articles.js"></script>
-    <!--own script-->
-    <script src="scripts/common.js"></script>
+
+    <!-- Header and footer script -->
+    <script src="scripts/common.js" defer></script>
+
+    <!-- Send message form script -->
+    <script src="scripts/sendMessage.js" defer></script>
   </body>
 </html>
