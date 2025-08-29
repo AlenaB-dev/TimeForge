@@ -1,4 +1,4 @@
-const watchDeatils = {
+export const watchDeatils = {
   watch1: {
     specs: [
       "Case: Stainless steel",
