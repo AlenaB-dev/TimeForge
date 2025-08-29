@@ -5,29 +5,46 @@ const form = document.querySelector(".contact-form");
 form.addEventListener("submit", function (e) {
   e.preventDefault(); // Prevent actual submission
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
+  let isValid = true;
+
+  // Clear previous errors
+  form
+    .querySelectorAll(".invalid-feedback")
+    .forEach((el) => (el.textContent = ""));
+  form
+    .querySelectorAll(".form-control")
+    .forEach((el) => el.classList.remove("is-invalid"));
 
   // Name validation: English and Ukrainian letters only
-  if (!/^[A-Za-zА-ЩЬЮЯЄІЇҐа-щьюяєіїґ\s-]+$/.test(name)) {
-    alert("Name should contain only English or Ukrainian letters.");
-    return;
+  const name = document.getElementById("name");
+  if (!/^[A-Za-zА-ЩЬЮЯЄІЇҐа-щьюяєіїґ\s-]+$/.test(name.value.trim())) {
+    const error = name.nextElementSibling;
+    error.textContent =
+      "Name should contain only English or Ukrainian letters.";
+    name.classList.add("is-invalid");
+    isValid = false;
   }
 
   // Email validation
-  if (!/^\S+@\S+\.\S+$/.test(email)) {
-    alert("Please enter a valid email address.");
-    return;
+  const email = document.getElementById("email");
+  if (!/^\S+@\S+\.\S+$/.test(email.value.trim())) {
+    const error = email.nextElementSibling;
+    error.textContent = "Please enter a valid email address.";
+    email.classList.add("is-invalid");
+    isValid = false;
   }
 
   // Message validation
-  if (message.length === 0) {
-    alert("Message cannot be empty.");
-    return;
+  const message = document.getElementById("message");
+  if (message.value.trim() === "") {
+    const error = message.nextElementSibling;
+    error.textContent = "Message cannot be empty.";
+    message.classList.add("is-invalid");
+    isValid = false;
   }
 
   // If all validations pass
-  alert("Form submitted successfully! (demo)");
-  form.reset();
+  if (isValid) {
+    form.submit();
+  }
 });
