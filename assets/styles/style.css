@@ -454,6 +454,11 @@ main {
   color: #34495e;
 }
 
+#contact-info-header {
+  font-size: 1.3rem;
+  color: #34495e;
+}
+
 .send-message form {
   max-width: 500px;
   margin: 0 auto;
@@ -464,7 +469,7 @@ main {
 }
 
 /* Contact information */
-.send-message h3 {
+#send-message-header {
   font-size: 1.3rem;
   margin: 15px auto;
   color: #34495e;
@@ -532,7 +537,7 @@ main {
 .send-message .text-muted {
   font-size: 0.9rem;
   color: #6c757d;
-  margin-top: 10px;
+  margin: 10px 20px;
 }
 
 /* Footer */
