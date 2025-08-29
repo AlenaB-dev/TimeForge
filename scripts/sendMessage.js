@@ -34,11 +34,18 @@ form.addEventListener("submit", function (e) {
     isValid = false;
   }
 
-  // Message validation
+  // Message validation: English and Ukrainian letters, basic punctuation
   const message = document.getElementById("message");
+  const messageRegex = /^[A-Za-zА-ЩЬЮЯЄІЇҐа-щьюяєіїґ0-9\s.,!?'"()-]+$/; // буквы, цифры, пробелы и знаки
   if (message.value.trim() === "") {
     const error = message.nextElementSibling;
     error.textContent = "Message cannot be empty.";
+    message.classList.add("is-invalid");
+    isValid = false;
+  } else if (!messageRegex.test(message.value.trim())) {
+    const error = message.nextElementSibling;
+    error.textContent =
+      "Message can contain only English or Ukrainian letters and basic punctuation.";
     message.classList.add("is-invalid");
     isValid = false;
   }
