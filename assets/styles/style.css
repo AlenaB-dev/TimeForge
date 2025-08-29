@@ -555,7 +555,7 @@ main {
 }
 
 /* Mobile responsive for header */
-@media (max-width: 991px) {
+@media (max-width: 576px) {
   .navbar-text-header {
     order: 1;
     width: 100%;
@@ -633,7 +633,7 @@ main {
   }
 }
 
-/* Mobile responsive for сфефдщпу зфпу */
+/* Mobile responsive for catalog search input */
 @media (max-width: 576px) {
   .catalog-search-input {
     width: calc(100% - 20px); /* consider parents padding/margin */
