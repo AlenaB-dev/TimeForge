@@ -58,6 +58,7 @@
           action="https://formspree.io/f/mdklabgn"
           method="POST"
           class="contact-form"
+          novalidate
         >
           <div class="mb-3">
             <label for="name" class="form-label">Your Name *</label>
@@ -68,6 +69,7 @@
               class="form-control"
               required
             />
+            <div class="invalid-feedback"></div>
           </div>
 
           <div class="mb-3">
@@ -79,6 +81,7 @@
               class="form-control"
               required
             />
+            <div class="invalid-feedback"></div>
           </div>
 
           <div class="mb-3">
@@ -100,6 +103,7 @@
               rows="5"
               required
             ></textarea>
+            <div class="invalid-feedback"></div>
           </div>
 
           <button type="submit" class="btn btn-primary">Send Message</button>
