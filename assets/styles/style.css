@@ -540,6 +540,55 @@ main {
   margin: 10px 20px;
 }
 
+/* Style for Thank you page */
+
+body.thankyou-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #3b3b59);
+  color: var(--light-color);
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.thankyou-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 20px var(--dark-bg);
+  max-width: 400px;
+  width: 90%;
+}
+
+.thankyou-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--darkgold-color);
+}
+
+.thankyou-container p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.thankyou-container .btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background: var(--gold-color);
+  color: #1e1e2f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.thankyou-container .btn:hover {
+  background: var(--darkgold-color);
+}
+
 /* Footer */
 #footer-placeholder {
   text-align: center;
