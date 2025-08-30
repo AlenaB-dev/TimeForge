@@ -591,7 +591,7 @@ body.thankyou-page {
 
 /* Checkmark on the thankyou page*/
 .thankyou-container h1 .checkmark::before {
-  content: "✔";
+  content: "✓";
   color: var(--darkgold-color);
   font-size: 2rem;
   margin-right: 8px;
