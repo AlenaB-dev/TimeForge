@@ -55,11 +55,19 @@
       <section class="send-message">
         <h2 id="send-message-header">Send us a message</h2>
         <form
-          action="https://formspree.io/f/mdklabgn"
+          action="https://formsubmit.co/abelokonskaya.87@gmail.com"
           method="POST"
           class="contact-form"
           novalidate
         >
+          <input type="hidden" name="_captcha" value="false" />
+
+          <input
+            type="hidden"
+            name="_next"
+            value="https://alenab-dev.github.io/TimeForge/thankyou.html"
+          />
+
           <div class="mb-3">
             <label for="name" class="form-label">Your Name *</label>
             <input
