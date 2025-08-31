@@ -1,4 +1,4 @@
-# It’s Watch Time
+# TimeForge
 
 A website dedicated to watch enthusiasts — featuring industry news and a model catalog with filters.
 
@@ -8,22 +8,26 @@ This project is designed for watch lovers and collectors. Stay updated with the 
 
 ## Project Structure
 
-```
-/its-watch-time
+```plaintext
+/TimeForge
 │
 ├── /assets
-│ ├── /images # Images and icons
-│ └── /styles # CSS stylesheets
+│   ├── /images        # Images and icons
+│   └── /styles        # CSS stylesheets
+│
 ├── /includes
-│ ├── /footer.html
-│ └── /header.html
-├── /scripts # JavaScript files
-├── index.html # Main page
-├── articles.html # Watch article page
-├── catalog.html # Watch catalog page
-├── contact.html # Contact page
-├── thankYou.html # Thank you page
-└── README.md # Project description
+│   ├── footer.html
+│   └── header.html
+│
+├── /scripts           # JavaScript files
+│
+├── index.html         # Main page
+├── articles.html      # Watch article page
+├── catalog.html       # Watch catalog page
+├── contact.html       # Contact page
+├── thankYou.html      # Thank you page
+│
+└── README.md          # Project description
 ```
 
 ## How to Run
